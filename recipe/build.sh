@@ -24,7 +24,7 @@ mkdir -p ${SYS_PREFIX}/conda-bld/src_cache/
 if [[ ! -e "${SYS_PREFIX}/conda-bld/src_cache/linux-${ctng_kernel}.tar.bz2" ]] && \
    [[ ! -e "${SYS_PREFIX}/conda-bld/src_cache/linux-${ctng_kernel}.tar.xz" ]]; then
   if [[ ${ctng_kernel} == 2.6.* ]]; then
-    ${DOWNLOADER} ftp://ftp.be.debian.org/pub/linux/kernel/v2.6/linux-${ctng_kernel}.tar.bz2 ${DOWNLOADER_OUT} ${SYS_PREFIX}/conda-bld/src_cache/linux-${ctng_kernel}.tar.bz2
+    ${DOWNLOADER} http://ftp.be.debian.org/pub/linux/kernel/v2.6/linux-${ctng_kernel}.tar.bz2 ${DOWNLOADER_OUT} ${SYS_PREFIX}/conda-bld/src_cache/linux-${ctng_kernel}.tar.bz2
   elif [[ ${ctng_kernel} == 3.* ]]; then
     # Necessary because crosstool-ng looks in the wrong location for this one.
     ${DOWNLOADER} https://www.kernel.org/pub/linux/kernel/v3.x/linux-${ctng_kernel}.tar.bz2 ${DOWNLOADER_OUT} ${SYS_PREFIX}/conda-bld/src_cache/linux-${ctng_kernel}.tar.bz2
