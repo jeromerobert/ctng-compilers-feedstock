@@ -11,7 +11,7 @@ ctng_binutils:
 ctng_cpu_arch:
 - x86_64
 ctng_gcc:
-- 7.5.0
+- 9.3.0
 ctng_libc:
 - gnu
 ctng_target_platform:
